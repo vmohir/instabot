@@ -23,8 +23,7 @@ class Database {
 		return mysqli_query($this->db, "SELECT * FROM `chats` WHERE chat_id = '$this->chat_id' ");
 	}
 	function insert($state, $text, $username = '', $fullname = '', $permission = 0, $data = '') {
-		$default_cats = json_encode([0,0,0,0,0,0]);
-		return mysqli_query($this->db, "INSERT INTO `chats` (chat_id, state, last_message, permission, data, username, fullname, cats) VALUES ('$this->chat_id', '$state', '$text', '$permission', '$data', '$username', '$fullname', '$default_cats') ");
+		return mysqli_query($this->db, "INSERT INTO `chats` (chat_id, state, last_message, permission, data, username, fullname) VALUES ('$this->chat_id', '$state', '$text', '$permission', '$data', '$username', '$fullname') ");
 	}
 	function set_permission($permission, $chat_id = false) {
 		if ($chat_id === false)
