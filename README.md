@@ -1,2 +1,3 @@
-## [Dining ut](http://dining.ut.ac.ir) reservation bot
-Reserve food with this bot
+## [Instagram](https://www.instagram.com) simulation telegram bot
+
+based on this [API](https://github.com/mgp25/Instagram-API)
