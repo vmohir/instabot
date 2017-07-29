@@ -7,10 +7,6 @@ function log_debug($text, $chat_id = 92454) {
 		'chat_id' => $chat_id,
 		'text' => $text
 	]);
-
-	$debug_file = fopen("log.txt","a");
-	fwrite($debug_file, $text . PHP_EOL . "-------------------------\r\n");
-	fclose($file);
 }
 
 // getters
