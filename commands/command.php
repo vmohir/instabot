@@ -1,6 +1,6 @@
 <?php
 
-class first_command extends base_command{
+class first_command extends base_command {
 	public $name = 'start';
 	public $description = '/start';
 		

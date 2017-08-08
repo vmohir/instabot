@@ -145,6 +145,8 @@ function get_initial_keyboard() {
 	$is_admin =  $db->check_user_permission(ADMIN);
 	$is_author = $db->check_user_permission(AUTHOR);
 	$permission = $is_admin ? ADMIN : $is_author ? AUTHOR : USER;
+	if (!isset($keyboard_buttons['start']))
+		return '';
 	$buttons = $keyboard_buttons["start"];
 	$commands = array();
 	
