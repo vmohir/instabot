@@ -36,10 +36,13 @@ if ($message != null) {
 		}*/
 
 		$state = get_chat_state($text, $username, $fullname);
-		if (!is_cancel_command($chat_id, $text, $message))
-			if (!handle_state($state, $chat_id, $text, $message))
-				if (!run_keyboard_button($text, $chat_id, $message))
+		if (!is_cancel_command($chat_id, $text, $message)) {
+			if (!handle_state($state, $chat_id, $text, $message)){
+				if (!run_keyboard_button($text, $chat_id, $message)) {
 					run_commands($text, $chat_id, $message);
+				}
+			}
+		}
 		
 	} catch (Exception $e) {
 		log_debug($e->getPrevious());

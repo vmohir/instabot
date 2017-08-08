@@ -1,6 +1,6 @@
 <?php 
 
-function run_commands($text, $chat_id, $message_id, $message) {
+function run_commands($text, $chat_id, $message) {
 	global $db;
 	preg_match_all('/\/\w+/', $text, $commands); // matches all commands
 	$command_class = substr($commands[0][0].'_command',1); // get the first command

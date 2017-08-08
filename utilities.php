@@ -1,4 +1,13 @@
 <?php 
+function contains_word($source, $find)
+{
+    if (strpos($source, $find) !== false) {
+        return true;
+    }
+
+    return false;
+}
+
 function emoji($text){
     $emoji = [
         'laugh' => '😂',
