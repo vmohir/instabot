@@ -1,5 +1,6 @@
 {
     "require": {
-        "irazasyed/telegram-bot-sdk": "master-dev"
+        "irazasyed/telegram-bot-sdk": "master-dev",
+        "mgp25/instagram-php": "dev-master"
     }
 }
