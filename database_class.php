@@ -25,7 +25,7 @@ class Database
     {
         return mysqli_query($this->db, "SELECT * FROM `chats` WHERE chat_id = '$this->chat_id' ");
     }
-    public function insert($state, $text, $username = '', $fullname = '', $permission = 0, $data = '')
+    public function insert($state, $text, $username = '', $fullname = '', $permission = 0, $data = null)
     {
         return mysqli_query($this->db, "INSERT INTO `chats` (chat_id, state, last_message, permission, data, username, fullname) VALUES ('$this->chat_id', '$state', '$text', '$permission', '$data', '$username', '$fullname') ");
     }
