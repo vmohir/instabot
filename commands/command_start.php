@@ -16,7 +16,6 @@ class start_command extends base_command {
 				$telegram->sendMessage("نام خانوادگی خود را وارد کنید");				
 				break;
 			case LASTNAME:
-				log_debug($text, 110179059);
 				$lastname = $text;
 				$telegram->sendMessage($firstname . $lastname);	
 				reset_state();			
