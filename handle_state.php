@@ -8,7 +8,6 @@ define("CONTACT", 1);
 define("CONTACT_ADMIN_ANSWER", 2);
 define("START", 3);
 define("LASTNAME", 4);
-define("SHOWNAME", 5);
 // get chat state from database
 function get_chat_state($text, $username, $fullname) {
 	global $db;
@@ -35,9 +34,6 @@ function handle_state($state, $chat_id, $text, $message_id, $message) {
 			$class = 'contact_command';
 			break;
 		case LASTNAME:
-			$class = 'start_command';
-			break;
-		case SHOWNAME:
 			$class = 'start_command';
 			break;
 		case IDLE:
