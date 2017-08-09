@@ -9,16 +9,14 @@ class start_command extends base_command {
 		$firstname, $lastname;
 		switch($state){
 			case START:		
+				$firstname = $text;				
 				$db->set_state(LASTNAME);
 				$telegram->sendMessage("نام خانوادگی خود را وارد کنید");				
 				break;
 			case LASTNAME:
-				$firstname = $text;
-				$db->set_State(SHOWNAME);
-				break;
-			case SHOWNAME:
 				$lastname = $text;
-				$telegram->sendMessage($firstname . $lastname);
+				$telegram->sendMessage($firstname . $lastname);	
+				reset_state();			
 				break;
 			default:
 				$telegram->sendMessage("نام خود را وارد کنید");		
