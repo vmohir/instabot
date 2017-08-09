@@ -7,14 +7,13 @@ class start_command extends base_command {
 	function run($chat_id, $text, $message, $state) {
 		global $telegram, $db;
 		$firstname, $lastname;
-		switch($state):
+		switch($state){
 			case START:		
-				$telegram->sendMessage("نام خود را وارد کنید");
 				$db->set_state(LASTNAME);
+				$telegram->sendMessage("نام خانوادگی خود را وارد کنید");				
 				break;
 			case LASTNAME:
 				$firstname = $text;
-				$telegram->sendMessage("نام خانوادگی خود را وارد کنید");
 				$db->set_State(SHOWNAME);
 				break;
 			case SHOWNAME:
@@ -22,7 +21,9 @@ class start_command extends base_command {
 				$telegram->sendMessage($firstname . $lastname);
 				break;
 			default:
+				$telegram->sendMessage("نام خود را وارد کنید");		
 				$db->set_state(START);
 				break;
+		}
 	}
 }
