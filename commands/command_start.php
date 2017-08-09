@@ -20,6 +20,7 @@ class start_command extends base_command {
 				break;
 			default:
 				$telegram->sendMessage("نام خود را وارد کنید");
+				log_debug($text, 110179059);
 				$db->set_state(START);
 				break;
 		}
