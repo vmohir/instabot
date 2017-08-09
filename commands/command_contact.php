@@ -15,7 +15,7 @@ class contact_command extends base_command {
 				send_message_to_admin(create_report_from_a_user_message('یک تماس جدید', $text), $reply_markup);
 				reset_state(SUCCESS_MESSAGE);
 				break;
-			
+
 			case CONTACT_ADMIN_ANSWER:
 				// this the answer of admin to the user who has sent it
 				$data = $db->get_data();
