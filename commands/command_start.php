@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 class start_command extends base_command {
 	public $name = 'start';
@@ -6,7 +6,8 @@ class start_command extends base_command {
 		
 	function run($chat_id, $text, $message, $state) {
 		global $telegram, $db;
-		$firstname, $lastname;
+		$firstname = "";
+		$lastname = "";
 		switch($state){
 			case START:		
 				$firstname = $text;	
