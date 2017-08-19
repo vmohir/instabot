@@ -7,7 +7,7 @@ require_once 'config.php';
 require 'main-controller.php';
 use Telegram\Bot\Api;
 
-$MAMAD_ID = 117990761;
+define("MAMAD_ID", 0);
 
 // connecting
 $telegram = new Api($token);
