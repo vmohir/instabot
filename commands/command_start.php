@@ -1,6 +1,7 @@
 <?php
 
 class start_command extends base_command {
+	log_debug("in start command", 117990761);
 	public $name = 'start';
 	public $description = '/start';
 	function run($chat_id, $text, $message, $state) {
