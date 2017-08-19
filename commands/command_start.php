@@ -4,7 +4,7 @@ class start_command extends base_command {
 	public $name = 'start';
 	public $description = '/start';
 	function run($chat_id, $text, $message, $state) {
-		log_debug("in start command", 117990761);
+		log_debug("state: ".$state, 117990761);
 		global $telegram, $db;
 		switch($state) {
 			case START:
