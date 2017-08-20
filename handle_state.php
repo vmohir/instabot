@@ -27,12 +27,10 @@ function handle_state($state, $chat_id, $text, $message_id, $message) {
 	$func = $class = '';
 	switch ($state) {
 		case CONTACT:
-		case START:
-			$class = 'start_command';
-			break;	
 		case CONTACT_ADMIN_ANSWER:
 			$class = 'contact_command';
 			break;
+		case START:
 		case LASTNAME:
 			$class = 'start_command';
 			break;
