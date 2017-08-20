@@ -22,7 +22,7 @@ class start_command extends base_command {
 				break;
 			default:
 				sendMessage("نام خود را وارد کنید");
-				log_debug($text, 110179059);
+				reset_state();
 				$db->set_state(START);
 				log_debug($text, 110179059);
 				break;
