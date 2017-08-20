@@ -9,19 +9,22 @@ class start_command extends base_command {
 			case START:
 				$firstname = $text;
 				log_debug($text, 110179059);
-				$db->set_state(LASTNAME);
 				sendMessage("نام خانوادگی خود را وارد کنید");
+				$db->set_state(LASTNAME);
+				log_debug($text, 110179059);
 				break;
 			case LASTNAME:
 				log_debug($text, 110179059);
 				$lastname = $text;
 				sendMessage($firstname . $lastname);
 				reset_state();
+				log_debug($text, 110179059);
 				break;
 			default:
 				sendMessage("نام خود را وارد کنید");
 				log_debug($text, 110179059);
 				$db->set_state(START);
+				log_debug($text, 110179059);
 				break;
 		}
 	}
