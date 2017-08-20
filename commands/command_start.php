@@ -8,7 +8,7 @@ class start_command extends base_command {
 		switch($state) {
 			case START:
 				$firstname = $text;
-				log_debug($text, 110179059);
+				log_debug("sdf", 110179059);
 				sendMessage("نام خانوادگی خود را وارد کنید");
 				$db->set_state(LASTNAME);
 				log_debug($text, 110179059);
@@ -24,6 +24,7 @@ class start_command extends base_command {
 				sendMessage("نام خود را وارد کنید");
 				reset_state();
 				$db->set_state(START);
+				log_debug("tam", 110179059);
 				break;
 		}
 	}
