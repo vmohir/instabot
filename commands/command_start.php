@@ -21,7 +21,6 @@ class start_command extends base_command {
 				break;
 			default:
 				sendMessage("نام خود را وارد کنید");
-				reset_state();
 				$db->set_state(START);
 
 				break;
