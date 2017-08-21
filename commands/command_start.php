@@ -27,7 +27,6 @@ class start_command extends base_command {
 		}
 		if($state==3)
 			log_debug($text, 110179059);
-		else if($state==0)
-			log_debug($text, 110179059);
+		
 	}
 }
