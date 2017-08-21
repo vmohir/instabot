@@ -5,6 +5,7 @@ class start_command extends base_command {
 	public $description = '/start';
 	function run($chat_id, $text, $message, $state) {
 		global $telegram, $db;
+
 		switch($state) {
 			case START:
 				$firstname = $text;
@@ -25,5 +26,7 @@ class start_command extends base_command {
 				log_debug($text, 110179059);
 				break;
 		}
+		if($state==3)
+			log_debug($text, 110179059);
 	}
 }
