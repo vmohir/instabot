@@ -12,7 +12,12 @@ function run_commands($text, $chat_id, $message) {
 			reply('ببخشید اما شما نویسنده ی سایت نیستید!');
 		} else if ($permission == ADMIN && !$is_admin) {
 			reply('برای استفاده از این دستور باید ادمین کانال باشید');
-		} else {
+		} 
+		else if($permission==START){
+			reply(نام خانوادگی خود را وارد کنید);
+			$command->run($chat_id, $text, $message, IDLE);
+		}
+		else {
 			$command = new $command_class();
 			$command->run($chat_id, $text, $message, IDLE);
 		}
